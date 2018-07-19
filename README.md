@@ -8,6 +8,8 @@
 ## 项目部分截图
 
 
-![](https://github.com/liyuhong-hainan/wechat-app-unicorn/blob/master/images/demo/index.jpg) --> ![](https://github.com/liyuhong-hainan/wechat-app-unicorn/blob/master/images/demo/shop.jpg)
-<br>  
-![](https://github.com/liyuhong-hainan/wechat-app-unicorn/blob/master/images/demo/goods.jpg) --> ![](https://github.com/liyuhong-hainan/wechat-app-unicorn/blob/master/images/demo/buy.jpg)
+![](https://github.com/liyuhong-hainan/wechat-app-unicorn/blob/master/images/demo/index.jpg) -------- ![](https://github.com/liyuhong-hainan/wechat-app-unicorn/blob/master/images/demo/shop.jpg)
+
+<br>  <br>  <br>  
+
+![](https://github.com/liyuhong-hainan/wechat-app-unicorn/blob/master/images/demo/goods.jpg) --------- ![](https://github.com/liyuhong-hainan/wechat-app-unicorn/blob/master/images/demo/buy.jpg)
