@@ -1,0 +1,85 @@
+<view class="container">
+  <view class="head-title">预约顾问 量身定制</view>
+  <view class="title-wrapper">
+    <view class="title-bg">
+        限时免费(<text class="line-through">原价299¥</text>）
+    </view>
+  </view>
+  <view class="adviser">
+    <image class="avatar" src="http://ovu8osqcv.bkt.clouddn.com/xiaomao.png" />
+    <text class="name">
+      理财顾问 胡经理
+    </text>
+    <view class="tel" catchtap="makePhone">
+      4006-111-500
+    </view>
+  </view>
+ 
+  <view class="buy-wrapper">
+        <view class="buy-main">
+          <view class="title">
+            今日已有<text class="yellow">187人</text>预约顾问
+          </view>
+          <view class="info-item">
+            <input type="text" class="input name" bindinput="inputName" placeholder="请输入您的称呼"/>
+            <view class="right-com">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio value="1" name="sex" color="#000" checked="true"/>
+              <text class="sex-text" style="margin-right: 5px">先生</text>
+              <radio value="2" name="sex" color="#000" checked=""/>
+              <text class="sex-text">女士</text>
+             </radio-group> 
+            </view>
+          </view> 
+          <view class="info-item">
+            <input type="number" class="input tel" bindinput="inputMobile"  placeholder="请输入您的手机号码" />
+          </view>
+          <view class="info-item" style="margin-top: 40rpx;">
+            <text class="contact-time">
+               选择联系时间：
+            </text>
+            <view class="right-select" catchtap="contactTimeTap">
+              <text wx:if="{{contactTime == 1}}">30分钟内</text>
+              <text wx:if="{{contactTime == 2}}">上午</text>
+              <text wx:if="{{contactTime == 3}}">下午</text>
+              <image src="/images/down_arrow.png"></image>
+            </view>
+          </view>
+          <view class="sub-btn">
+            <button catchtap="appointSub">提交预约</button>
+          </view>
+          <view class="btn-text">
+            顾问会在工作日（10:00 - 18:00）内联系您
+          </view>
+        </view>
+      </view>
+       <view class="bottom-title">
+        <view class="line"></view>
+        <view class="text">服务流程</view>
+        <view class="line"></view>
+      </view>
+      <view class="process-content">
+        <view class="col">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/appoint_service.png"></image>
+          <view class="text">
+            免费预约
+        </view>
+        </view>
+        <view class="col">
+           <image src="http://ovu8osqcv.bkt.clouddn.com/appoint_pay.png"></image>
+          <view class="text">
+            分析需求
+          </view>
+        </view>
+        <view class="col">
+           <image src="http://ovu8osqcv.bkt.clouddn.com/appoint_success.png"></image>
+          <view class="text">
+            定制方案
+          </view>
+        </view>
+      </view>
+      <view class="bottom-text">
+        <view class="title">我们承诺：</view>
+        <view class="text"> 您的信息仅供接收预约服务所用，您的隐私将被严格保密</view>
+      </view>
+</view>

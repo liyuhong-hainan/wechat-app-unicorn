@@ -1,0 +1,109 @@
+<view class="container">
+  <view class="unuse-coupon">
+   <block wx:for="{{couponList}}" wx:for-item="item" wx:for-index="idx" wx:key="item.id">
+    <view class="unuse-item" wx:if="{{item.status==100&&item.type==100}}">
+      <view class="top-row">
+        <view class="left-com">
+           <image src="/images/my/coupon/unicorn_logo.png"></image> 
+          <text>{{item.title}}</text>
+        </view>
+        <view class="right-com">
+          <view class="money-num">
+          ¥{{item.faceValue}}
+          </view>
+          <view class="minus-text">
+          {{item.description}}
+          </view>
+        </view>
+      </view>
+      <view class="bottom-row">
+        <view class="left-com">
+         <view class="brand">
+          <image src="/images/my/coupon/icon_brand.png"></image>
+          <text>适用品牌：商城通用</text>
+         </view>
+          <view class="date">
+          <image src="/images/my/coupon/icon_date.png"></image>
+          <text>有效期：{{item.expireDate}}</text>
+         </view>
+        </view>
+        <view class="right-com">
+          <button class="use-btn" data-url="/pages/category/category" catchtap="navigatorTap">立即使用</button>
+        </view>
+      </view>
+    </view>
+        <view class="unuse-item zaiyi" wx:if="{{item.status==100&&item.type==200}}">
+      <view class="top-row">
+        <view class="left-com">
+           <image src="/images/my/coupon/zaiyi_logo.png"></image> 
+          <text>{{item.title}}</text>
+        </view>
+        <view class="right-com">
+          <view class="money-num">
+          ¥{{item.faceValue}}
+          </view>
+          <view class="minus-text">
+           {{item.description}}
+          </view>
+        </view>
+      </view>
+      <view class="bottom-row">
+        <view class="left-com">
+         <view class="brand">
+          <image src="/images/my/coupon/icon_invest.png"></image>
+          <text>使用范围：在意财富APP中使用</text>
+         </view>
+          <view class="date">
+          <image src="/images/my/coupon/icon_date.png"></image>
+          <text>有效期：{{item.expireDate}}</text>
+         </view>
+        </view>
+        <view class="right-com">
+          <button class="use-btn purple" data-type="0" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber" wx:if="{{userInfo.rightStatus==1}}">立即领取</button>
+             <button class="use-btn purple" catchtap="zaiyiApplet" wx:if="{{userInfo.rightStatus > 1}}">立即领取</button>
+        </view>
+      </view>
+    </view>
+    </block>
+  </view>
+  <view class="vip-wrapper" wx:if="{{dataLoaded}}">
+  <image src="http://ovu8osqcv.bkt.clouddn.com/zaiyicaifu_free_vip.png" catchtap="toMiniProgram"></image>
+    <!-- <button plain="true" style="border: 1px solid #fff;" data-type="1" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{userInfo.rightStatus==1}}">免费领取</button> -->
+  <button plain="true" style="border: 1px solid #fff;" catchtap="zaiyiAppletVip">免费领取</button>
+  </view>
+   <view class="used-coupon">
+      <block wx:for="{{couponList}}" wx:for-item="item" wx:for-index="idx" wx:key="item.id">
+       <view class="used-item" wx:if="{{item.status==200&&item.type==100}}">
+      <view class="top-row">
+        <view class="left-com">
+           <image src="/images/my/coupon/unicorn_logo.png"></image> 
+          <text>{{item.title}}</text>
+        </view>
+        <view class="right-com">
+          <view class="money-num">
+          ¥{{item.faceValue}}
+          </view>
+          <view class="minus-text">
+          {{item.description}}
+          </view>
+        </view>
+      </view>
+      <view class="bottom-row">
+        <view class="left-com">
+         <view class="brand">
+          <image src="/images/my/coupon/icon_brand.png"></image>
+          <text>适用品牌：商城通用</text>
+         </view>
+          <view class="date">
+          <image src="/images/my/coupon/icon_date.png"></image>
+          <text>有效期：{{item.expireDate}}</text>
+         </view>
+        </view>
+        <view class="right-com">
+          <button class="use-btn">已使用</button>
+        </view>
+      </view>
+    </view>
+  </block>
+  </view>
+</view>

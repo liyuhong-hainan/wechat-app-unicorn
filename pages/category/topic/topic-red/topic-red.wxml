@@ -1,0 +1,93 @@
+<view class="container">
+  <view class="banner">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/topic_img00.png"></image>
+  </view>
+   <view class="title-image">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_love.png"></image>
+  </view>
+   <view class="intro-text">
+    Milan V连续几季以＃LOVE这一全世界最有力量的通用语作为灵感，将爱融于时装艺术，以时尚先行者之姿率先赋予时装极具人文内涵的社会意义，呼吁世界更多爱与美好。此次全新推出的胶囊系列以一颗具象写实但跃动有力的“心脏”图案为符号，表达出最直白的爱，每一件都是经典款，卫衣、白衬衫、T恤、手袋…… “心脏”与“＃LOVE”相得益彰，传递“爱”深刻隽永的内涵：生命在爱中跳动。
+  </view>
+    <view class="banner" style="height:550rpx;margin-top: 20rpx;">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_ouyangnana.png"></image>
+  </view>
+  <view class="intro-title">
+  欧阳娜娜与宝姿PORTS艺术装置互动
+  </view>
+  <view class="intro-text">
+宝姿旗舰店现场搭建了多个关于“爱”的艺术装置，这颗视觉冲击力十足的“心脏”造型吸引了陈冠希、欧阳娜娜等众多明星的关注。有爱就有心跳，有心跳就有生命，宝姿希望以此系列唤起人们心中对爱的渴望和信任。  </view>
+  <view class="banner" style="height:520rpx;margin-top: 20rpx;">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_guanxi.png"></image>
+  </view>
+  <view class="intro-title">
+  陈冠希宝姿Ports心跳派对打碟
+  </view>
+  <view class="intro-text">
+歌手陈冠希在宝姿策略发展副总裁Marc Boelen的陪同下欣赏了全新＃LOVE胶囊系列，并替女儿Alaia收到了一份充满爱的礼物——宝姿旗下童装品牌的连体服。在“为爱心跳”派对上，陈冠希携手Djezdick，献上一首专为宝姿精心编排的音乐，将当晚气氛推向高潮。</view>
+ <view class="banner" style="height:900rpx;margin-top: 20rpx;text-align: center">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_zhennan.png" style="width:600rpx;"></image>
+  </view>
+  <view class="intro-title">
+  周震南马伯骞身着同款心形图案胶囊系列针织衫
+  </view>
+   <view class="intro-text">
+有着“签证CP”之称的《明日之子》Rapper歌手马伯骞、周震南当晚合体亮相宝姿旗舰店，两个人颇为默契地选择了同一款编织心形图案的胶囊系列针织衫，一黑一白，“心心”相印。 </view>
+ <view class="banner" style="height:520rpx;margin-top: 20rpx;">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_people.png"></image>
+  </view>
+  <view class="intro-title">
+  欧阳娜娜上演宝姿PORTS街头快闪秀
+  </view>
+  <view class="intro-text">
+在宝姿2018春夏伦敦女装秀上，爱玩的欧阳娜娜展示了自己的滑板技能，今天她再次踏上滑板，在南京西路十字路口参与了一场街头快闪秀，众多身着＃LOVE胶囊系列的舞蹈演员出其不意地在南京西路斑马线上演绎了一场关于爱的探索之旅。 </view>
+  <view class="classic-wrapper">
+    <view class="classic-title">
+      <text>胶囊系列明星同款</text>
+    </view>
+    <view class="classic-content">
+      <view class="classic-name">
+        “为爱心跳”明星同款
+      </view>
+      <!-- <view class="swiper-wrapper">
+        <swiper catchtap="onSwiperTap" indicator-dots="{{false}}">
+          <swiper-item>
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper_1.png"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper_2.png"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper_3.png"></image>
+          </swiper-item>
+        </swiper>
+      </view> -->
+      <view class="scroll-wrapper">
+        <scroll-view class="scroll-view" scroll-x style="width: 100%">
+         <view class="scroll-list">
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_swiper11.png?format/jpg"></image>
+          </view>
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_swiper22.png?format/jpg"></image>
+          </view>
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_swiper33.png?format/jpg"></image>
+          </view>
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_red_swiper44.png?format/jpg"></image>
+          </view>
+         </view> 
+      </scroll-view>
+      </view>
+    </view>
+  </view>
+ <view class="goods-list">
+    <block wx:for="{{topicList[0].data}}"  wx:for-item="item"  wx:for-index="idx" wx:key="{{id}}">
+    <view class="goods-item" wx:if="{{idx > 0}}" data-id="{{item.id}}" catchtap="goodsDetail">
+      <image src="{{item.pic}}?imageView2/1/w/286/h/426/format/jpg/q/60"></image>
+      <view class="name">{{item.title}}</view>
+      <view class="price">￥{{item.marketPrice}}</view>
+    </view>
+   </block>
+  </view>
+</view>

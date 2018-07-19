@@ -1,0 +1,10 @@
+<template name="goodsTemplate">
+  <view class="goods-container" data-id="{{id}}" catchtap="goodsDetail">
+    <image class="goods-img" src="{{picUrl}}?imageView2/1/w/286/h/426/format/jpg/q/60"></image>
+    <view class="goods-name">{{name}}</view>
+    <view class="goods-score">
+      <text class="score-text">￥{{price}}</text>
+      <!-- <text class="score-num">{{price}}</text> -->
+    </view>
+  </view>
+</template>

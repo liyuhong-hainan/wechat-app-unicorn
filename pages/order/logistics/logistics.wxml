@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="top-wrapper">
+    <image src="{{logisticsInfo.logo}}"></image>
+    <view class="right-com">
+      <text>物流状态：<block wx:if="{{logisticsInfo.deliveryStatus == 1}}">在途中</block>
+      <block wx:if="{{logisticsInfo.deliveryStatus == 2}}">派件中</block>
+      <block wx:if="{{logisticsInfo.deliveryStatus == 3}}">已签收</block>
+      <block wx:if="{{logisticsInfo.deliveryStatus == 4}}">派送失败</block>
+      </text>
+      <text>承运来源：{{logisticsInfo.expressName}}</text>
+      <text>运单编号：{{logisticsInfo.number}}</text>
+    </view>
+  </view>
+  <view class="order-progress">
+    <view class="progress-title">订单进度</view>
+    <block wx:for="{{progressList}}" wx:for-item="item" wx:for-index="idx" wx:key="item.idx">
+    <view class="progress-item {{idx==0? 'cur': ''}}">
+      <view class="left-com">
+        <view class="circle"></view>
+        <view class="line" wx:if="{{idx!=progressList.length-1}}"></view>
+      </view>
+      <view class="right-com">
+        <text class="pro-info">{{item.status}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

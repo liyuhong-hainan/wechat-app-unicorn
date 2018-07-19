@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="question-title">
+    常见问题
+  </view>
+  <view class="question-content">
+  <text>您好，优尼康Fashion您购买的商品，商家会在48小时内发货。以下情况除外：
+    1、某些特殊产品
+    2、节假日
+    3、部分特殊类产品
+    </text>
+  </view>
+</view>

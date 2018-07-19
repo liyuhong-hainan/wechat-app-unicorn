@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="head-box">
+    <view class="integral-num">{{extra.availablePoints}}</view>
+    <view class="buy-btns">
+      <navigator url="pay/pay">
+        <view class="btn-item">充值</view>
+      </navigator>
+      <view class="btn-item" catchtap="onBuyTap">购买</view>
+    </view>
+  </view>
+  <block wx:for="{{amountlist}}" wx:for-item="item" wx:for-index="idx" wx:key="item.idx">
+    <view class="date-row">
+      <view class="title-date">{{item.month}}</view>
+      <view class="bill-list">
+        <view class="bill-item"  wx:for="{{item.list}}" wx:for-item="child"  wx:key="item.id">
+          <view class="left-com">
+            <view class="buy-resource">{{child.sourceTypeDesc}}</view>
+            <wxs src="../../../wxs/tools.wxs" module="dateFormat"/>
+            <view class="buy-date">{{dateFormat.formatTime(child.createTime)}}</view>
+          </view>
+          <view class="right-com">
+          <text wx:if="{{child.type==1}}">+</text >
+          <text  wx:if="{{child.type==2}}">-</text>{{child.points}}
+          </view>
+        </view>
+      </view>
+    </view>
+ </block>
+</view>

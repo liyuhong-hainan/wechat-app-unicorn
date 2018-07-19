@@ -1,0 +1,17 @@
+<import src="goods-template/goods-template.wxml" />
+<view class="container">
+ <scroll-view scroll-y="true" bindscrolltolower="loadMore">
+  <view class="banner">
+    <image src="{{extra.categoryPicUrl}}" wx:if="{{extra.categoryPicUrl}}"></image>
+  </view>
+  <view class="goods-list" >
+    <block wx:for="{{productlist}}"  wx:for-item="goods" wx:key="{{id}}">
+      <template is="goodsTemplate" data="{{...goods}}"/>
+    </block>
+  </view>
+  <view wx:if="{{loading}}" class="load-content">
+    <text class="weui-loading"/><text class="loading-text">加载中,请稍后...</text>
+  </view>
+    <view class="no-data" wx:if="{{isNodata}}">该品类暂无上架商品</view>
+  </scroll-view> 
+</view>

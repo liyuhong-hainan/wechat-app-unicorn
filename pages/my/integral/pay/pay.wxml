@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="top-title">
+    请输入充值金额
+  </view>
+  <view class="input-wrapper">
+    <text>充值金额</text>
+    <input  type="digit" placeholder="最低充值1000元" focus="{{isFocus}}" bindinput="inputText" confirm-type="send" />
+  </view>
+  <!-- <view class="intro-wrapper">
+    <view class="intro-title"></view>
+    <text>1、目前充值换U积分比例为 1:{{userPoints.exchageRate}}，举例来说，您充值10000元，则可获得{{10000 * userPoints.exchageRate}}U积分。</text>
+    <text>2、U积分可用于消费优尼康Fashion小程序内商品，邀请好友可获得更多U积分。</text>
+    <text>3、充值换U积分由优尼康Fashion联合在意财富提供，本活动解释权归 优尼康Fashion&在意财富。</text>
+  </view> -->
+  <button class="sub-btn" catchtap="preRecharge">确定充值</button>
+  <view class="bottom-text">账户余额：{{userPoints.availablePoints}}</view>
+</view>

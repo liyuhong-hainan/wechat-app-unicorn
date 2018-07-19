@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/search/search",
+    "pages/category/search/search",
+    "pages/category/topic/topic-red/topic-red",
+    "pages/category/topic/topic-stripe/topic-stripe",
+    "pages/category/topic/topic-white/topic-white",
+    "pages/index/financial/financial",
+    "pages/index/financial/appoint/appoint",
+    "pages/index/supermodel/supermodel",
+    "pages/index/superrun/superrun",
+    "pages/goods/goods",
+    "pages/goods/goods-detail/goods-detail",
+    "pages/order/order",
+    "pages/order/order-detail/order-detail",
+    "pages/order/logistics/logistics",
+    "pages/my/my",
+    "pages/my/address/address",
+    "pages/my/address/address-edit/address-edit",
+    "pages/my/address/address-select/address-select",
+    "pages/my/invite/invite",
+    "pages/my/rights/rights",
+    "pages/my/integral/integral",
+    "pages/my/integral/pay/pay",
+    "pages/my/question/question",
+    "pages/my/question/question-detail/question-detail",
+    "pages/my/agent/agent",
+     "pages/my/coupon/coupon"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "UNICORN",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "position": "bottom",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab/index.png",
+        "selectedIconPath": "images/tab/index_hl.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/tab/search.png",
+        "selectedIconPath": "images/tab/search_hl.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tab/my.png",
+        "selectedIconPath": "images/tab/my_hl.png"
+      }
+    ]
+  }
+}

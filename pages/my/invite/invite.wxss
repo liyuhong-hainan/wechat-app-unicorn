@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.code-box{
+  min-height: 300px;
+  margin: 30px 80rpx;
+  padding: 20rpx;
+  background: rgb(251, 251, 251);
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+  text-align: center;
+}
+.code-box .code{
+  width: 430rpx;
+  height: 430rpx;
+  margin-top: 10px;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.user{
+display: flex;
+margin: 30rpx;
+}
+.user .avatar{
+  width: 67rpx;
+  height: 67rpx;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+.user .right-com{
+  flex: 67rpx 1;
+  text-align: left;
+  margin-left: 15rpx;
+   margin-top: -4rpx; 
+}
+.user .right-com .username{
+  display: inline;
+  font-size: 26rpx;
+  line-height: 28rpx;
+}
+.user .right-com .solo{
+  display: block;
+  font-size: 20rpx;
+   line-height: 28rpx;
+   margin-top: 4px;
+}
+.code-box text{
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+}
+.btn-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 20rpx;
+}
+.btn-wrapper button{
+  width: 250rpx;
+  font-size: 34rpx;
+}
+.btn-wrapper .save-btn{
+  background: #000;
+  color: #fff;
+}
+.btn-wrapper .share-btn{
+  background: rgb(235, 82, 25);
+  color: #fff;
+}
+.bottom-text{
+  margin-top: 20px;
+  margin-left: 175rpx;
+}
+.bottom-text text{
+  display: block;
+  font-size: 28rpx;
+  line-height: 48rpx;
+}

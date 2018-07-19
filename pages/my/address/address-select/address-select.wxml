@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="address-list">
+    <radio-group class="radio-group" bindchange="radioChange">
+    <block wx:for="{{addressList}}" wx:for-item="item" wx:for-index="idx" wx:key="item.id">
+      <view class="address-item">
+        <view class="name-tel">
+          <text class="name">{{item.name}} {{item.mobile}}</text>
+          <radio color="#000" value="{{item.id}}"  checked="{{item.id == selectAddress.id}}">
+            </radio>
+        </view>
+        <view class="city-address">
+          <text class="city">{{item.province}} {{item.city}} {{item.district}}</text>
+          <text class="address">{{item.detail}}</text>
+        </view>
+        <!-- <view class="bottom-bar">
+          <view class="left-com">
+            <radio color="#000" value="{{item.id}}"  checked="{{item.defaultFlag == 1}}">
+            </radio>
+          </view>
+          <view class="right-com">
+             <view class="nav-a" data-id="{{item.id}}" catchtap="deleteAddress">
+              <text>删除</text>
+            </view> 
+            <text class="middle-line">|</text>
+            <view class="nav-a" catchtap="updateAddress" data-id="{{item.id}}">
+              <text>编辑</text>
+            </view>
+          </view>
+        </view> -->
+      </view>
+    </block>
+    </radio-group>
+  </view>
+   <button class="add-btn" catchtap="weichatAddAddress">微信添加地址</button> 
+</view>

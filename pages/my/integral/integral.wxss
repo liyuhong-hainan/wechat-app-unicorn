@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.head-box{
+  position: relative;
+  height: 359rpx;
+  background: url(http://ovu8osqcv.bkt.clouddn.com/my_integral_bg.png?imageView2/1/w/749/h/359);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.integral-num{
+  margin-top: 86rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 60rpx;
+}
+.buy-btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50rpx;
+}
+.btn-item{
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 2rpx solid #fff;
+  border-radius: 100rpx;
+  -webkit-border-radius: 100rpx;
+  -moz-border-radius: 100rpx;
+  color: #fff;
+  text-align: center;
+}
+.date-row{
+  margin-top: 30rpx;
+}
+.title-date{
+  margin-left: 28rpx;
+  font-size: 28rpx;
+}
+.bill-list{
+  margin-top: 10rpx;
+  background: #fff;
+}
+.bill-item{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 28rpx;
+  padding-bottom: 20rpx;
+}
+
+.bill-item::after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height:1px;
+  background: rgb(229, 229, 229);
+  -webkit-transform:scaleY(.5);
+  -ms-transform:scaleY(.5);
+  -o-transform:scaleY(.5);
+  transform:scaleY(.5);
+}
+.buy-resource{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.buy-date{
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: rgb(117, 117, 117)
+}
+.right-com{
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+  font-size: 30rpx;
+}

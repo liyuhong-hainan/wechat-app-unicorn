@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="banner">
+    <image src="{{topicList[2].titlePic}}?format/jpg" wx:if="{{topicList[2].titlePic}}"></image>
+  </view>
+  <view class="intro-text">
+    PORTSPURE用多变条纹告诉你：没有条纹的秋日，是不完整的！经典的条纹元素，在设计师的无限创意中焕发出新的生命力。你的衣橱里，还缺一件条纹衫吗？
+  </view>
+  <view class="gif-wrapper">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/striation.gif"></image>
+  </view>
+  <view class="classic-wrapper">
+    <view class="classic-title">
+      <text>PORTSPURE</text>
+    </view>
+    <view class="classic-content">
+      <view class="classic-name">
+        经典花纹玩转新花样
+      </view>
+      <!-- <view class="swiper-wrapper">
+        <swiper catchtap="onSwiperTap" indicator-dots="{{false}}">
+          <swiper-item>
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper_1.png"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper_2.png"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper_3.png"></image>
+          </swiper-item>
+        </swiper>
+      </view> -->
+      <view class="scroll-wrapper">
+        <scroll-view class="scroll-view" scroll-x style="width: 100%">
+         <view class="scroll-list">
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper11.png?format/jpg"></image>
+          </view>
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper22.png?format/jpg"></image>
+          </view>
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_stripe_swiper33.png?format/jpg"></image>
+          </view>
+         </view> 
+      </scroll-view>
+      </view>
+    </view>
+  </view>
+ <view class="goods-list">
+    <block wx:for="{{topicList[2].data}}"  wx:for-item="item"  wx:for-index="idx" wx:key="{{id}}">
+    <view class="goods-item" wx:if="{{idx > 0}}" data-id="{{item.id}}" catchtap="goodsDetail">
+      <image src="{{item.pic}}?imageView2/1/w/286/h/426/format/jpg/q/60"></image>
+      <view class="name">{{item.title}}</view>
+      <view class="price">￥{{item.marketPrice}}</view>
+    </view>
+   </block>
+  </view>
+</view>

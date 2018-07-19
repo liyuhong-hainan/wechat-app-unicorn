@@ -1,0 +1,22 @@
+<view class="container">
+   <view class="code-box">
+  <view class="user">
+      <image class="avatar" src="{{user.avatarUrl}}"></image>  
+    <view class="right-com">
+      <text class="username">{{user.nickName}}</text>
+      <text class="solo">告诉小伙伴，我在用优尼康Fashion</text> 
+    </view>
+  </view>
+    <image class="code" src="{{user.code}}" catchtap="previewImage">
+    </image> 
+  <text>长按小程序码，关注优尼康Fashion</text>
+  </view>
+  <view class="btn-wrapper">
+    <button class="save-btn" catchtap="saveImage">保存到手机</button>
+    <button class="share-btn" open-type="share">邀请好友</button>
+  </view>
+  <!-- <view class="bottom-text">
+    <text>1、邀请好友奖励10U积分。</text>
+    <text>2、活动时间截止至 2017-12-31</text>
+  </view>  -->
+</view>

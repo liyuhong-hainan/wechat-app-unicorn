@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="top-title">
+    常见问题
+  </view>
+  <view class="question-list">
+    <view class="question-item" data-id="1" catchtap="questionDetailTap">
+      <text>我兑换的产品什么时候发货？</text>
+      <image src="/images/my/icon_right.png"></image>
+    </view>
+      <view class="question-item" data-id="1" catchtap="questionDetailTap">
+      <text>如何联系优尼康Fashion客服？</text>
+      <image src="/images/my/icon_right.png"></image>
+    </view>
+  </view>
+</view>

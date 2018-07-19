@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="top-title">
+  邀请码
+  </view>
+  <!-- <view class="rule">
+  查看邀请规则>>
+  </view> -->
+  <input class="code-input" type="number" placeholder="请输入您的邀请码" focus="{{isFocus}}" bindinput="inputText" confirm-type="send"/>
+    <button class="sub-btn" catchtap="userExchange">提交</button>
+</view>

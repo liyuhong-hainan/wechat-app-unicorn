@@ -1,0 +1,74 @@
+<view class="container">
+  <view class="banner">
+    <image src="{{topicList[1].titlePic}}?format/jpg" wx:if="{{topicList[1].titlePic}}"></image>
+  </view>
+  <view class="ports-title">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/ports1961_title.png"></image>
+  </view>
+  <view class="intro-text">
+    夏末初秋，回顾宝姿PORTS启动NO.10白衬衫巡展。宋茜穿上了宝姿NO.10白衬衫，传承经典，与世界对话。
+  </view>
+  <view class="video-wrapper">
+    <video src="http://ovu8osqcv.bkt.clouddn.com/Portsmovie.mp4" controls poster="http://ovu8osqcv.bkt.clouddn.com/video_photo.png?imageView2/1/w/345/h/250/format/jpg"></video>
+  </view>
+  <view class="intro-text">
+    以 “读白” 为主题的宝姿NO.10白衬衫巡展起航北京SKP。宋茜选择了一身NO.10白衬衫搭配条纹短裙现身活动现场，没有过多的修饰显得格外自信灵动。
+  </view>
+  <view class="gif-wrapper">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/SS-Ports.gif"></image>
+  </view>
+  <view class="intro-text">
+    这件看似简约的白衬衫实际却大有文章，宋茜在衬衫上选择定制了一句英文刺绣：“I AM BRAVE” ，通过衬衫表达自己的人生独白。
+  </view>
+  <view class="gif-wrapper">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/SS-Porte1.gif"></image>
+  </view>
+  <view class="classic-wrapper">
+    <view class="classic-title">
+      <text>PORTS 1961白衬衫</text>
+    </view>
+    <view class="classic-content">
+      <view class="classic-name">
+        致敬经典，延续创意
+     </view>
+      <!--  <view class="swiper-wrapper">
+         <swiper catchtap="onSwiperTap" indicator-dots="{{false}}">
+          <swiper-item>
+            <image data-src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper_1.png0" src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper_1.png"></image>
+          </swiper-item>
+          <swiper-item>
+            <image data-src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper_2.png" src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper_2.png"></image>
+          </swiper-item>
+          <swiper-item>
+            <image data-src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper_3.png" src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper_3.png"></image>
+          </swiper-item>
+        </swiper> 
+      </view> -->
+      <view class="scroll-wrapper">
+        <scroll-view class="scroll-view" scroll-x style="width: 100%">
+         <view class="scroll-list">
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper11.png?format/jpg"></image>
+          </view>
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper22.png?format/jpg"></image>
+          </view>
+          <view class="scroll-item">
+            <image src="http://ovu8osqcv.bkt.clouddn.com/topic_white_swiper33.png?format/jpg"></image>
+          </view>
+         </view> 
+      </scroll-view>
+      </view>
+    </view>
+  </view>
+
+  <view class="goods-list">
+    <block wx:for="{{topicList[1].data}}"  wx:for-item="item"  wx:for-index="idx" wx:key="{{id}}">
+    <view class="goods-item" wx:if="{{idx > 0}}" data-id="{{item.id}}" catchtap="goodsDetail">
+      <image src="{{item.pic}}?imageView2/1/w/286/h/426/format/jpg/q/60"></image>
+      <view class="name">{{item.title}}</view>
+      <view class="price"> ￥{{item.marketPrice}}</view>
+    </view>
+   </block>
+  </view>
+</view>

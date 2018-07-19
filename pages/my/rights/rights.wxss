@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.head-box{
+  position: relative;
+  height: 499rpx;
+  background: #fff;
+}
+.head-box::after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height:1px;
+  background: rgb(229, 229, 229);
+  -webkit-transform:scaleY(.5);
+  -ms-transform:scaleY(.5);
+  -o-transform:scaleY(.5);
+  transform:scaleY(.5);
+}
+.head-car{
+  position: relative;
+  height: 356rpx;
+  margin: 45rpx 50rpx 35rpx 50rpx;
+  background: url(http://ovu8osqcv.bkt.clouddn.com/my_car.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.head-car .bind-phone{
+  position: absolute;
+  top: 154rpx;
+  left: 222rpx;
+  width: 196rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+.head-car .nickname{
+  position: absolute;
+  bottom: 28rpx;
+  left: 34rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+.head-car .cardno{
+  position: absolute;
+  bottom: 58rpx;
+  left: 34rpx;
+  font-size: 20rpx;
+  color: #fff;
+}
+.integral{
+  text-align: center;
+  font-size: 26rpx;
+  text-decoration: underline;
+}
+.rights{
+  margin-top: 70rpx;
+  text-align: center;
+}
+.rights-title{
+  font-size: 30rpx;
+}
+.rights-items{
+  margin-top: 70rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.rights-items:last-child{
+  margin-top: 40rpx;
+}
+.item-wrapper{
+  flex: 1;
+}
+.item-wrapper text{
+  display: block;
+  margin-top: 10rpx;
+  font-size: 22rpx;
+}
+.item-wrapper image{
+  width: 50rpx;
+  height: 50rpx;
+}

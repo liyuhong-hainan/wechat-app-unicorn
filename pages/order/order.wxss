@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-tab {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  padding-right: 30rpx;
+}
+/* 
+.top-tab::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height: 1px;
+  background: rgb(229, 229, 229);
+  -webkit-transform: scaleY(0.5);
+  -ms-transform: scaleY(0.5);
+  -o-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+} */
+
+.tab-item {
+  flex: 1;
+  margin-left: 30rpx;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.tab-item.cur{
+  border-bottom: 3px solid #000;
+}
+.order-item{
+  padding-top: 20rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.order-item .top-com{
+  position: relative;
+  margin-left: 30rpx;
+  padding-right: 30rpx;
+  padding-bottom: 20rpx;
+}
+.order-item .top-com::after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height: 1px;
+  background: rgb(229, 229, 229);
+  -webkit-transform: scaleY(0.5);
+  -ms-transform: scaleY(0.5);
+  -o-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.order-item .top-com .status-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.order-item .top-com .status-row .right-text{
+  color: rgb(235, 82, 25)
+}
+.order-item .top-com .goods-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.order-item .top-com .goods-row .left-com{
+   position: relative;
+}
+.order-item .top-com .goods-row .left-com image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 68rpx;
+  height: 100rpx;
+}
+.order-item .top-com .goods-row .left-com .name-num{
+  margin-left: 90rpx;
+  margin-top: -4rpx;
+}
+.order-item .top-com .goods-row .left-com .name-num .name{
+  display: block;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+.order-item .top-com .goods-row .left-com .name-num .num-color{
+  display: block;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: rgb(117, 117, 117);
+}
+.order-item .top-com .goods-row .right-text{
+  font-size: 28rpx;
+   min-width: 120rpx;
+  text-align: right;
+}
+.order-item .bottom-com{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  text-align: right;
+  padding-right: 30rpx;
+}
+.order-item .bottom-com .button{
+  display: inline-block;
+  width: 160rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  margin-left: 25rpx;
+  border: 1px solid #000;
+  border-radius: 100rpx;
+  -webkit-border-radius: 100rpx;
+  -moz-border-radius: 100rpx;
+  font-size: 24rpx;
+}

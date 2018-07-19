@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+   background: #fff; 
+}
+swiper{
+  width: 100%;
+  height: 509rpx;
+}
+swiper image{
+  width: 100%;
+  height: 509rpx;
+}
+
+.banner{
+  width: 750rpx;
+  height: 538rpx;
+}
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+.special-topic{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding-top: 39rpx;
+  padding-bottom: 39rpx;
+}
+.special-topic::after{
+   display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height:1px;
+  background: #ddd;
+  -webkit-transform:scaleY(.5);
+  -ms-transform:scaleY(.5);
+  -o-transform:scaleY(.5);
+  transform:scaleY(.5);
+}
+.special-topic .topic-item{
+  flex: 1;
+  text-align: center;
+}
+.special-topic .topic-item image{
+  width: 99rpx;
+  height: 99rpx;
+}
+.special-topic .topic-item text{
+  display: block;
+}
+.special-recommend{
+  padding-top: 48rpx;
+  padding-bottom: 48rpx;
+}
+.special-recommend .title{
+  text-align: center;
+  margin: 0 160rpx;
+}
+.special-recommend .title image{
+ width: 100%;
+ height: 80rpx;
+}
+.recommend-list{
+  padding-bottom: 20rpx;
+}
+.recommend-list .recommend-row{
+  /* display: flex;
+  flex-direction: row; */
+}
+.recommend-list .recommend-row image{
+  width: 100%;
+  height: 565rpx;
+}
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+}
+.mask .mask-com{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  width: 520rpx;
+  height: 630rpx;
+  margin-top: -315rpx;
+  margin-left: -260rpx;
+  background-color: #fff;
+}
+.hidden {
+  /* opacity: 0; */
+  display: none;
+}
+.mask .mask-com .com-wrapepr{
+position: relative;
+}
+.mask .mask-com .com-wrapepr .content-img{
+  width: 520rpx;
+  height: 630rpx;
+}
+.mask .mask-com .com-wrapepr .mask-close{
+position: absolute;
+right: -10rpx;
+top: -10rpx;
+width: 40rpx;
+height: 40rpx;
+}
+.mall-btn{
+  margin-top: -60rpx;
+  width: 190rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 0;
+  background: #fff;
+  font-size: 22rpx;
+  color: #444;
+}
+.zaiyi-btn{
+  margin-top: -80rpx;
+  width: 190rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 0;
+  background: #fff;
+  font-size: 22rpx;
+  color: #444;
+}

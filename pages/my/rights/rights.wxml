@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="head-box">
+    <view class="head-car">
+    <view class="cardno">{{userInfo.cardNo}}</view>
+      <view class="nickname" >{{userInfo.nickName}}</view>
+    </view>
+    <navigator url="../integral/integral">
+    <view class="integral">
+      现有U积分:{{userInfo.availablePoints ? userInfo.availablePoints: 0}}
+    </view>
+    </navigator>
+  </view>
+  <view class="rights">
+    <view class="rights-title">钻石卡 · 会员权益</view>
+    <view class="rights-items">
+      <view class="item-wrapper">
+        <image src="/images/my/rights/package.png"></image>
+        <text>投资礼包</text>
+      </view>
+       <view class="item-wrapper">
+        <image src="/images/my/rights/airport.png"></image>
+        <text>机场贵宾厅</text>
+      </view>
+       <view class="item-wrapper">
+        <image src="/images/my/rights/birthday.png"></image>
+        <text>生日福利</text>
+      </view>
+    </view>
+     <view class="rights-items">
+      <view class="item-wrapper">
+        <image src="/images/my/rights/service.png"></image>
+        <text>专人客服</text>
+      </view>
+       <view class="item-wrapper">
+        <image src="/images/my/rights/childbirth.png"></image>
+        <text>月子服务</text>
+      </view>
+       <view class="item-wrapper">
+        <image src="/images/my/rights/other.png"></image>
+        <text>敬请期待</text>
+      </view>
+    </view>
+  </view>
+</view>

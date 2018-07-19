@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="head-wrapper">
+   <image src="http://ovu8osqcv.bkt.clouddn.com/financial_head.png?imageView2/1/w/750/h/356/format/jpg/q/60"></image>
+  </view>
+  <view class="title-wrapper">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/financial_01.png?imageView2/1/w/750/h/72/format/jpg/q/60"></image>
+  </view>
+  <view class="content-wrapper" style="height:1060rpx;">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/financial_01content.png?imageView2/1/w/750/h/1060/format/jpg/q/60"></image>
+  </view>
+  <view class="title-wrapper">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/financial_02.png?imageView2/1/w/750/h/72/format/jpg/q/60"></image>
+  </view>
+  <view class="content-wrapper" style="height:1443rpx;">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/financial_02content.png?imageView2/1/w/750/h/1443/format/jpg/q/60"></image>
+  </view>
+  <view class="title-wrapper">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/financial_03.png?imageView2/1/w/750/h/72/format/jpg/q/60"></image>
+  </view>
+   <view class="content-wrapper" style="height:1424rpx;">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/financial_03content.png?imageView2/1/w/750/h/1424/format/jpg/q/60"></image>
+  </view>
+   <view class="content-wrapper" style="height:902rpx;">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/financial_03content1.png?imageView2/1/w/750/h/902/format/jpg/q/60"></image>
+  </view>
+  <view class="foot-wrapper">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/financial_foot.png?imageView2/1/w/750/h/158/format/jpg/q/60"></image>
+  </view>
+     <view class="fix-button" data-url="appoint/appoint" catchtap="navigatorTap">
+      <!-- <view class="left-com">
+      </view> -->
+       <image src="http://ovu8osqcv.bkt.clouddn.com/financial_foot_btn.png"></image>
+    </view> 
+</view>

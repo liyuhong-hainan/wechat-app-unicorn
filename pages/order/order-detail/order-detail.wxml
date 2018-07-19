@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="top-wrapper">
+    <text wx:if="{{orderInfo.status == -1}}">已取消 </text>
+    <text wx:if="{{orderInfo.status == 10}}">待支付 </text>
+    <text wx:if="{{orderInfo.status == 20}}">待发货</text>
+     <text wx:if="{{orderInfo.status == 30}}">已发货 </text>
+     <text wx:if="{{orderInfo.status == 40}}">已完成 </text>
+    <image src="/images/order/icon_car.png"></image>
+  </view>
+  <view class="logistics-wrapper">
+    <view class="logistics-row">
+      <text class="left-text">收货人： </text>
+      <text class="right-text">{{orderInfo.userName}} {{orderInfo.mobile}}</text>
+    </view>
+     <view class="logistics-row">
+      <text class="left-text">收货地址：</text>
+      <text class="right-text">{{orderInfo.address}} </text>
+    </view>
+  </view>
+  <view class="goods-wrapper">
+    <view class="goods-info">
+    <view class="info-row" style="height: 100rpx;">
+        <view class="left-com">
+          <image src="{{orderInfo.picUrls[0]}}" wx:if="{{orderInfo.picUrls.length > 0}}"></image>
+          <view class="name-num">
+            <text class="name">{{orderInfo.productName}}</text>
+            <text class="num-color">{{orderInfo.size}}，{{orderInfo.color}}，{{orderInfo.count}}件</text>
+          </view>
+        </view>
+        <text class="right-text">{{orderInfo.totalPrice}} U积分</text>
+      </view>
+      <view class="info-row">
+        <text class="left-text">商品总价</text>
+        <text class="right-text">{{orderInfo.totalPrice}} U积分</text>
+      </view>
+       <view class="info-row">
+        <text class="left-text">运费</text>
+        <text class="right-text">0 U积分</text>
+      </view>
+       <view class="info-row">
+        <text class="left-text">订单总价</text>
+        <text class="right-text">{{orderInfo.totalPrice}} U积分</text>
+      </view>
+    </view>
+    <view class="order-info">
+      <view class="info-text">
+       订单编号： {{orderInfo.orderNo}}
+      </view>
+        <wxs src="../../../wxs/tools.wxs" module="dateFormat"/>
+      <view class="info-text">
+       购买时间： {{dateFormat.formatTime(orderInfo.payTime)}}
+      </view>
+    </view>
+  </view>
+</view>

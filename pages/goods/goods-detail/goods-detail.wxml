@@ -1,0 +1,51 @@
+<import src="buy-template/buy-template.wxml" />
+<view class="container">
+ <scroll-view  scroll-y  style="height: {{scrollHeight}}px">
+  <view class="top-wrapper">
+      <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="{{indicatorDots}}" indicator-color="rgb(239, 239, 239)">
+        <swiper-item wx:for="{{extra.picUrlList}}" wx:for-item="pic">
+            <image data-src="{{pic}}" src="{{pic}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="name-row">
+      <text class="left-name">{{extra.name}}</text>
+      <view class="right-percent" wx:if="{{extra.discount}}">
+       <text>优惠</text><text class="percent">{{extra.discount}}</text>
+      </view>
+    </view>
+    <view class="integral">
+      <text class="integral-text">￥</text><text class="integral-num">{{extra.price}}</text>
+    </view>
+    <view class="price-stock">
+      <text class="price" wx:if="{{extra.marketPrice > 0}}">市场价  ¥{{extra.marketPrice}}</text>
+      <text class="stock">库存  {{extra.stock}}</text>
+    </view>
+  </view>
+  <view class="goods-info">
+    <view class="title">
+    商品介绍
+    </view>
+    <view class="content">
+      {{extra.detail}}
+    </view>
+  </view>
+  <block wx:for="{{extra.extra}}" wx:for-item="item" wx:for-index="idx" wx:key="{{item.label}}">
+   <view class="goods-info">
+    <view class="title">
+    {{item.label}}
+    </view>
+    <view class="content">
+     {{item.value}}
+    </view>
+    </view>
+    </block>
+   <view class="btn-wrapper">
+      <button class="buy-btn" catchtap="buyTap">立即购买</button>
+    </view>
+  </scroll-view>
+     <view class="overplay" wx:if="{{buyTemplateShow}}">
+      <view class="buy-detail">
+        <template is="buyTemplate" data="{{...productInfo}}"/>
+      </view>
+    </view> 
+</view>

@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.top-title{
+  margin-top: 115rpx;
+  text-align: center;
+  font-size: 42rpx;
+}
+.rule{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 26rpx;
+  text-decoration: underline;
+}
+.code-input{
+  width: 320rpx;
+  padding: 15rpx;
+  margin: 150rpx auto 0 auto;
+  border-bottom: 1px solid #000;
+}
+.sub-btn{
+  margin-top: 80rpx;
+  margin-left:40rpx;
+  margin-right: 40rpx;
+  background: #000;
+  font-size: 36rpx;
+  color: #fff;
+}

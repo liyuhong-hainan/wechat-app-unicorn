@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.add-btn{
+  margin-top: 100rpx;
+  margin-left:40rpx;
+  margin-right: 40rpx;
+  background: #000;
+  font-size: 36rpx;
+  color: #fff;
+}
+.address-item{
+  background: #fff;
+  padding-top: 20rpx;
+}
+.name-tel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.name-tel text{
+  font-size: 28rpx;
+}
+.city-address{
+  position: relative;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  padding-bottom: 30rpx;
+}
+.city-address::after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height:1px;
+  background: rgb(229, 229, 229);
+  -webkit-transform:scaleY(.5);
+  -ms-transform:scaleY(.5);
+  -o-transform:scaleY(.5);
+  transform:scaleY(.5);
+}
+.city-address text{
+  margin-right: 30rpx;
+  font-size: 24rpx;
+}
+.bottom-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 30rpx;
+  padding-bottom: 20rpx;
+}
+.bottom-bar .left-com radio{
+ font-size: 30rpx;
+}
+.bottom-bar .right-com{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+.bottom-bar .right-com .nav-a{
+  font-size: 26rpx;
+}
+.bottom-bar .right-com .middle-line{
+  color: rgb(229, 229, 229);
+  margin: 0 40rpx;
+}

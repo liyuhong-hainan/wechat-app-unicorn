@@ -1,0 +1,118 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.top-wrapper{
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  padding-left: 30rpx;
+  padding-top: 45rpx;
+  padding-bottom: 45rpx;
+}
+.top-wrapper text{
+ font-size: 38rpx;
+ height: 38rpx;
+ line-height: 30rpx;
+ vertical-align: middle;
+}
+.top-wrapper image{
+  width: 40rpx;
+  height: 38rpx;
+  margin-left: 20rpx;
+  /* margin-top: 10rpx; */
+  vertical-align: middle;
+}
+.logistics-wrapper{
+  margin-top: 20rpx;
+  background: #fff;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-bottom: 20rpx;
+}
+.logistics-wrapper .logistics-row{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.logistics-wrapper .logistics-row .left-text{
+  width: 150rpx;
+  font-size: 28rpx;
+}
+.logistics-wrapper .logistics-row .right-text{
+  flex: 1;
+  flex-wrap: wrap;
+  font-size: 28rpx;
+}
+.goods-wrapper{
+ margin-top: 20rpx;
+ margin-bottom: 20rpx;
+  background: #fff;
+  padding-left: 30rpx;
+  padding-bottom: 20rpx;
+}
+.goods-wrapper .goods-info{
+  position: relative;
+  padding-right: 30rpx;
+  padding-bottom: 30rpx;
+}
+.goods-wrapper .goods-info::after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height:1px;
+  background: rgb(229, 229, 229);
+  -webkit-transform:scaleY(.5);
+  -ms-transform:scaleY(.5);
+  -o-transform:scaleY(.5);
+  transform:scaleY(.5);
+}
+.goods-wrapper .goods-info .info-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.goods-wrapper .goods-info .info-row .left-com{
+  position: relative;
+}
+.goods-wrapper .goods-info .info-row .left-com image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 68rpx;
+  height: 100rpx;
+}
+.goods-wrapper .goods-info .info-row .left-com .name-num{
+  margin-left: 90rpx;
+  margin-top: 0rpx;
+}
+.goods-wrapper .goods-info .info-row .left-com .name-num .name{
+  display: block;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+.goods-wrapper .goods-info .info-row .left-com .name-num .num-color{
+  display: block;
+  margin-top: 0rpx;
+  font-size: 24rpx;
+  color: rgb(117, 117, 117);
+}
+.goods-wrapper .goods-info .info-row .left-text{
+  font-size: 28rpx;
+}
+.goods-wrapper .goods-info .info-row .right-text{
+  min-width: 120rpx;
+  text-align: right;
+  font-size: 28rpx;
+}
+.goods-wrapper .order-info{
+  margin-top: 20rpx;
+}
+.goods-wrapper .order-info .info-text{
+   margin-top: 20rpx;
+    font-size: 28rpx;
+}

@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="top-tab">
+    <view class="tab-item {{status==0 ? 'cur' : ''}}" data-status="0" catchtap="changeTab">
+      全部
+    </view>
+    <view class="tab-item {{status==20 ? 'cur' : ''}}" data-status="20" catchtap="changeTab">
+      待发货
+    </view>
+    <view class="tab-item {{status==30 ? 'cur' : ''}}" data-status="30" catchtap="changeTab">
+      已发货
+    </view>
+    <view class="tab-item {{status==40 ? 'cur' : ''}}" data-status="40" catchtap="changeTab">
+      已完成
+    </view>
+  </view>
+  <view class="order-list">
+    <block wx:for="{{orderList}}" wx:for-item="item" wx:for-index="idx" wx:key="item.idx">
+      <view class="order-item">
+        <view class="top-com" data-id="{{item.id}}" catchtap="orderInfoTap">
+          <view class="status-row">
+            <text class="left-text">订单编号：{{item.orderNo}}</text>
+            <text class="right-text" wx:if="{{item.status == -1}}">已取消 </text>
+            <text class="right-text" wx:if="{{item.status == 10}}">待支付 </text>
+            <text class="right-text" wx:if="{{item.status == 20}}">已付款</text>
+            <text class="right-text" wx:if="{{item.status == 30}}">已发货 </text>
+            <text class="right-text" wx:if="{{item.status == 40}}">已完成 </text>
+          </view>
+          <view class="goods-row" style="min-height: 100rpx;">
+            <view class="left-com">
+              <image src="{{item.picUrls[0]}}" wx:if="{{item.picUrls.length > 0}}"></image>
+              <view class="name-num">
+                <text class="name">{{item.productName}}</text>
+                <text class="num-color">{{item.size}}，{{item.color}}，{{item.count}}件</text>
+              </view>
+            </view>
+            <text class="right-text">{{item.totalPrice}} U积分</text>
+          </view>
+        </view>
+        <view class="bottom-com" wx:if="{{item.status==30 || item.status==40 }}">
+          <view class="button" data-id="{{item.id}}" catchtap="logisticsTap" wx:if="{{item.status==30 || item.status==40 }}">查看物流</view>
+          <view class="button" data-id="{{item.id}}" catchtap="orderCompleteTap" wx:if="{{item.status==30}}">确认收货</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="no-data" wx:if="{{orderList.length==0}}">暂无订单记录</view>
+</view>

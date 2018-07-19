@@ -1,0 +1,27 @@
+<import src="/pages/goods/goods-template/goods-template.wxml" />
+<view class="container">
+  <view class="head-search">
+    <image src="/images/category/icon_search.png"></image>
+    <input placeholder="输入想要的商品信息" value="{{keyword}}" focus="{{isFocus}}" bindinput="inputText"></input>
+    <view class="right-a" catchtap="searchCancel">{{keyword.length==0?'搜索':'取消'}}</view>
+  </view>
+   <view class="hot-wrapper" wx:if="{{keyword.length==0}}">
+    <view class="title">热门搜索</view>
+    <view class="hot-words">
+      <text class="word" wx:for="{{hotWords}}"  wx:for-item="item" wx:for-index="index" wx:key="{{item}}" data-word="{{item}}" catchtap="hotWordSearch">{{item}}</text>
+    </view>
+  </view> 
+  <view class="category" wx:if="{{keyword.length>0}}">
+    <text class="category-item {{categoryId==-1 ? 'cur':''}}" wx:if="{{categories.length>0}}"  data-id="-1" catchtap="categorySelect">全部</text>
+    <text class="category-item {{categoryId==item.id ? 'cur':''}}" wx:for="{{categories}}"  wx:for-item="item" wx:for-index="index" wx:key="{{item}}" data-id="{{item.id}}" catchtap="categorySelect">{{item.name}}</text>
+  </view>
+    <view class="goods-list" wx:if="{{keyword.length>0}}">
+    <block wx:for="{{productlist}}"  wx:for-item="goods" wx:key="{{id}}">
+      <template is="goodsTemplate" data="{{...goods}}"/>
+    </block>
+  </view>
+    <view wx:if="{{loading}}" class="load-content">
+    <text class="weui-loading"/><text class="loading-text">加载中,请稍后...</text>
+  </view>
+   <view class="no-data" wx:if="{{keyword.length>0&&productlist.length==0&&!loading}}">没有找到商品</view>
+</view>

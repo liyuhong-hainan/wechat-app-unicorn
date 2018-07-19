@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.address-wrapper{
+  background: #fff;
+}
+.address-row{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+}
+.address-row::after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: '';
+  height:1px;
+  background: rgb(229, 229, 229);
+  -webkit-transform:scaleY(.5);
+  -ms-transform:scaleY(.5);
+  -o-transform:scaleY(.5);
+  transform:scaleY(.5);
+}
+.default-row{
+  position: relative;
+  margin-left: 0;
+  margin-top: 30rpx; 
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  background: #fff; 
+}
+.default-row::before{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  content: '';
+  height:1px;
+  background: rgb(229, 229, 229);
+  -webkit-transform:scaleY(.5);
+  -ms-transform:scaleY(.5);
+  -o-transform:scaleY(.5);
+  transform:scaleY(.5);
+}
+.address-row .left-text{
+  width: 160rpx;
+  font-size: 30rpx;
+  margin-top: 8rpx;
+}
+.address-row .right-com input{
+  font-size: 30rpx;
+  width: 500rpx;
+}
+.address-row .right-com.city-select{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.address-row .right-com.city-select input{
+ margin-right: 10rpx;
+}
+.address-row .right-com.city-select image{
+  width: 14rpx;
+  height: 26rpx;
+  margin-top: 10rpx;
+}
+.save-btn{
+  margin-top: 100rpx;
+  margin-left:40rpx;
+  margin-right: 40rpx;
+  background: #000;
+  font-size: 36rpx;
+  color: #fff;
+}
+.hidden {
+    opacity: 0;
+}
+.input {
+  width: 500rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+} 
+switch {
+  position: absolute;
+  right: 40rpx;
+  top: 50%;
+  margin-right: -10rpx;
+  margin-top: -16px;
+  transform: scale(0.9);
+  transform-origin: right center;
+}
+.input-placeholder {
+    color: #ccc;
+}
+.area-item {
+    line-height: 40px;
+    text-align: center;
+}
+
+.distpicker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 560rpx;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+.distpicker-btn {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 40rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: rgb(244, 244, 244);
+    color: #000;
+}
+
+.distpicker-content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 560rpx;
+    background-color: #fff;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+

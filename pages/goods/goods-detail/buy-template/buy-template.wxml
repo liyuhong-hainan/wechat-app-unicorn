@@ -1,0 +1,62 @@
+<template name="buyTemplate">
+  <view class="buy-container">
+    <view class="top-close">
+      <view class="left-text">颜色、尺码、数量</view>
+      <image class="right-close" src="/images/goods/buy_detail_close.png" catchtap="closeBuyTap"></image>
+    </view>
+    <view class="buy-main">
+      <view class="buy-info">
+        <image src="{{pic}}"></image>
+        <view class="right-com">
+          <view class="intergral-stock">
+            <text class="intergral-num">￥{{price}}</text>
+            <!-- <text class="intergral-text">U积分</text> -->
+            <text class="stock-text">（库存 {{stock}}）</text>
+          </view>
+          <text class="notice-text">请选择颜色、尺码、数量、收获地址</text>
+        </view>
+      </view>
+      <view class="buy-color">
+        <text class="color-title">颜色</text>
+        <view class="color-list">
+          <block wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" wx:key="item.color" >
+            <view class="color-item {{colorIndex==idx? 'cur': ''}}" data-idx="{{idx}}" data-item="{{item}}" catchtap="colorSelectTap">
+              <image src="{{item.picUrl ? item.picUrl :'/images/goods/color.png'}}"></image>
+              <text>{{item.color}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="buy-size">
+        <view class="buy-title">尺码</view>
+        <view class="size-list">
+          <view class="size-item {{size==sizeItem.size? 'cur': ''}}" wx:for="{{sizeList}}" wx:for-item="sizeItem" wx:for-index="idx" wx:key="sizeItem.size" data-item="{{sizeItem}}" catchtap="sizeSelectTap">
+            {{sizeItem.size}}
+          </view>
+        </view>
+      </view>
+      <view class="buy-num">
+        <text class="left-text">数量</text>
+        <view class="right-num">
+          <view class="minus {{count>1?'can':'' }}" catchtap="minusCount">-</view>
+          <view class="middle-num">{{count}}</view>
+          <view class="add can" catchtap="addCount">+</view>
+        </view>
+      </view>
+       <view class="coupon-row">
+          <text class="left-text">优惠券</text>
+          <text class="right-text" style="color: #999;" wx:if="{{!couponsValue}}">暂无可用</text>
+            <text class="right-text" style="color: #ff4949;" wx:if="{{couponsValue>0}}">{{couponsDesc}}</text>
+      </view>
+      <view class="buy-address"  catchtap="addressSelect">
+        <text class="left-text">收货地址</text>
+        <!-- <view class="right-address"> -->
+          <text class="right-text">{{address.name}} {{address.city}}{{address.district}} {{address.detail}}
+          </text>
+          <image src="/images/my/icon_right.png"></image>
+        <!-- </view> -->
+      </view>
+      <button class="sure-btn" catchtap="prePay">确认支付 {{price-couponsValue}}</button>
+    </view>
+  </view>
+</template>

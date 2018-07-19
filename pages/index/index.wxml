@@ -1,0 +1,73 @@
+<view class="container">
+  <swiper catchtap="onSwiperTap" indicator-dots="true" autoplay="true" interval="3000">
+    <swiper-item>
+      <image src="http://ovu8osqcv.bkt.clouddn.com/banner_Gucci.jpg?format/jpg"></image> 
+    </swiper-item>
+    <swiper-item>
+      <image src="http://ovu8osqcv.bkt.clouddn.com/banner_Alexander.jpg?format/jpg"></image> 
+    </swiper-item>
+    <swiper-item>
+         <image src="http://ovu8osqcv.bkt.clouddn.com/banner_chole.jpg?format/jpg"></image> 
+    </swiper-item>
+  </swiper>
+   <!-- <view class="banner" data-url="../category/category" catchtap="navigatorTap">
+     <image src="http://ovu8osqcv.bkt.clouddn.com/index_banner.jpg?format/jpg"></image> 
+     <image src="http://ovu8osqcv.bkt.clouddn.com/category_banner2.jpg?format/jpg"></image> 
+   </view> -->
+   <!-- <view class="special-topic">
+    <view class="topic-item">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_quanqiutongbu.png?imageView2/1/w/100/h/100/format/jpg"></image>
+      <text>全球同步</text>
+    </view>
+    <view class="topic-item">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_renqituijian.png?imageView2/1/w/100/h/100/format/jpg"></image>
+      <text>人气推荐</text>
+    </view>
+    <view class="topic-item">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_remenhuodong.png?imageView2/1/w/100/h/100/format/jpg"></image>
+      <text>热门活动</text>
+    </view>
+    <view class="topic-item">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_dujiahuati.png?imageView2/1/w/100/h/100/format/jpg"></image>
+      <text>独家话题</text>
+    </view>
+   </view> -->
+   <view class="special-recommend">
+    <view class="title">
+       <image src="http://ovu8osqcv.bkt.clouddn.com/special_recommen_title.png"></image> 
+    </view>
+   </view>
+   <view class="recommend-list">
+    <view class="recommend-row" data-url="../category/category" catchtap="navigatorTap">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_unicorn_mall_2.png"></image>
+      <!-- <image src="http://ovu8osqcv.bkt.clouddn.com/index_shangcheng_text.png?imageView2/1/w/375/h/286/format/jpg"></image> -->
+    </view>
+    <button class="mall-btn" plain="true" style="border: 1px solid #444;" data-url="../category/category" catchtap="navigatorTap">进入商城</button>
+    <view class="recommend-row" style="margin-top: 60rpx;">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_zaiyicaifu.png?imageView2/1/w/750/h/565/format/jpg" catchtap="zaiyiApplet"></image>
+      <!-- <image src="http://ovu8osqcv.bkt.clouddn.com/index_licai.png?imageView2/1/w/375/h/286/format/jpg"></image> -->
+    </view>
+      <!-- <view class="recommend-row" data-url="supermodel/supermodel" wx:if="{{comingsoon}}">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_chaomo.png?imageView2/1/w/375/h/286/format/jpg"></image>
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_chaomo_text1.png?imageView2/1/w/375/h/286/format/jpg"></image>
+    </view>
+        <view class="recommend-row" data-url="superrun/superrun" wx:if="{{comingsoon}}">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_chaopao_text1.png?imageView2/1/w/375/h/286/format/jpg"></image>
+      <image src="http://ovu8osqcv.bkt.clouddn.com/index_chaopao.png?imageView2/1/w/375/h/286/format/jpg"></image>
+    </view> -->
+   </view>
+   <!-- <button class="zaiyi-btn" plain="true" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{userInfo.rightStatus==1 || !userInfo.rightStatus}}" style="border: 1px solid #444;">前往体验</button> -->
+   <button class="zaiyi-btn" plain="true" catchtap="toMiniProgram" style="border: 1px solid #444;">前往体验</button>
+   <view style="height: 60rpx;">
+   </view>
+       <view style="height:60rpx; background-color: rgb(244, 244, 244);">
+    </view>
+   <view class="mask {{showMask ? '' : 'hidden'}}">
+    <view class="mask-com">
+    <view class="com-wrapepr">
+     <image src="http://ovu8osqcv.bkt.clouddn.com/mask_content1.png" class="content-img" catchtap="toCoupon"></image>
+     <image src="/images/index/mask_close.png" class="mask-close" catchtap="maskClose"></image>
+    </view>
+    </view>
+   </view>
+</view>

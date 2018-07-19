@@ -1,0 +1,36 @@
+.goods-container {
+  display:flex;
+  flex-direction: column;
+  padding-bottom: 30rpx;
+  text-align: center;
+}
+.goods-container:nth-child(2n){
+  margin-left: 18rpx;
+}
+.goods-img {
+  width: 336rpx;
+  height: 500rpx;
+}
+.goods-name{
+  width: 336rpx;
+  line-height: 30rpx;
+  min-height: 30rpx;
+  max-height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: rgb(117, 117, 117)
+}
+.goods-score{
+  margin-top: 0rpx;
+}
+.goods-score .score-text{
+  font-size: 22rpx;
+  color: rgb(117, 117, 117)
+}
+.goods-score .score-num{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  font-family: 'didot';
+}

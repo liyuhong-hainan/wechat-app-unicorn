@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.top-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30rpx;
+  background: #fff;
+}
+.top-wrapper image{
+  width: 88rpx;
+  height: 130rpx;
+}
+.top-wrapper .right-com{
+  flex: 1;
+  margin-left: 30rpx;
+  margin-top: -4rpx;
+}
+.top-wrapper .right-com text{
+  display: block;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.order-progress{
+  margin-top: 20rpx;
+  padding: 30rpx;
+  background: #fff; 
+}
+.order-progress .progress-title{
+  font-size: 28rpx;
+  color: rgb(77, 77, 77);
+}
+.order-progress .progress-item{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.order-progress .progress-item .left-com{
+  display: flex;
+  flex-direction: column;
+}
+.order-progress .progress-item .left-com .circle{
+  width: 25rpx;
+  height: 25rpx;
+  border: 2px solid #000;
+  border-radius: 100%;
+}
+.order-progress .progress-item.cur .left-com .circle{
+  background: rgb(117, 117, 117);
+}
+.order-progress .progress-item .left-com .line{
+  width: 2px;
+  height: 70rpx;
+  background: #000;
+  margin-top: 15rpx;
+  margin-left: 14rpx;
+}
+.order-progress .progress-item .right-com{
+  flex: 1;
+  margin-left: 15rpx;
+}
+.order-progress .progress-item .right-com text{
+  display: block;
+}
+.order-progress .progress-item .right-com .pro-info{
+  font-size: 24rpx;
+  color: rgb(117, 117, 117);
+}
+.order-progress .progress-item.cur .right-com .pro-info{
+  color: #000;
+}
+.order-progress .progress-item .right-com .time{
+  margin-top: 15rpx;
+  font-size: 20rpx;
+  color: rgb(117, 117, 117);
+}

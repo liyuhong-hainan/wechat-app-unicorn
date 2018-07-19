@@ -1,0 +1,110 @@
+<view class="container">
+<view class="top-search" data-url="search/search" catchtap="navigatorTap">
+  <image src="/images/category/top_search.png"></image>
+</view>
+  <view class="banner">
+    <image src="http://ovu8osqcv.bkt.clouddn.com/category_banner5.jpg"></image>
+  </view>
+  <view class="category-wrapper">
+    <scroll-view class="scroll-view clearfix" scroll-x style="width: 100%">
+      <view class="category-list">
+          <navigator url="/pages/goods/goods?id=1007">
+        <view class="category-item">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/category_scroll_package.png"></image>
+        </view>
+        </navigator>
+         <navigator url="/pages/goods/goods?id=1005">
+        <view class="category-item">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/category_scroll_accessories.png"></image>
+        </view>
+        </navigator>
+         <navigator url="/pages/goods/goods?id=1006">
+        <view class="category-item">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/category_scroll_shoes.png"></image>
+        </view>
+        </navigator>
+        <navigator url="/pages/goods/goods?id=1003">
+        <view class="category-item">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/category_scroll_woman.png"></image>
+        </view>
+        </navigator>
+         <navigator url="/pages/goods/goods?id=1004">
+        <view class="category-item">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/category_scroll_man.png"></image>
+        </view>
+        </navigator>
+        <!-- <view class="category-item">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/category_scroll_package.png"></image>
+        </view>
+        <view class="category-item">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/category_scroll_accessories.png"></image>
+        </view>
+        <view class="category-item">
+          <image src="http://ovu8osqcv.bkt.clouddn.com/category_scroll_shoes.png"></image>
+        </view> -->
+      </view>
+    </scroll-view>
+  </view>
+    <view class="cooperation-title">
+  <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_title.png"></image>
+  </view>
+  <view class="cooperation">
+    <view class="cooperation-row">
+     <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_1.png" data-key="Armani" catchtap="coopSearch" style="width: 250rpx;height: 144rpx;"></image>
+      <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_2.png" data-key="Ports" catchtap="coopSearch" style="width: 248rpx;height: 144rpx;border-left: 1rpx solid #e8e8e8;"></image> 
+      <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_3.png" data-key="Gucci" catchtap="coopSearch" style="width: 250rpx;height: 144rpx;border-left: 1rpx solid #e8e8e8;"></image> 
+    </view>
+      <view class="cooperation-row" style="border-top: 1rpx solid #e8e8e8;">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_4.png" data-key="Chloe" catchtap="coopSearch" style="width: 250rpx;height: 144rpx;"></image>
+      <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_5.png" data-key="BALENCIAGA" catchtap="coopSearch" style="width: 248rpx;height: 144rpx;border-left: 1rpx solid #e8e8e8;"></image> 
+      <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_6.png" data-key="Saint Laurent" catchtap="coopSearch" style="width: 250rpx;height: 144rpx;border-left: 1rpx solid #e8e8e8;"></image> 
+    </view>
+    <view class="cooperation-row" style="border-top: 1rpx solid #e8e8e8;">
+      <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_7.png" data-key="Bottega Veneta" catchtap="coopSearch" style="width: 250rpx;height: 144rpx;"></image>
+       <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_8.png" data-key="Sergio Rossi" catchtap="coopSearch" style="width: 248rpx;height: 144rpx;border-left: 1rpx solid #e8e8e8;"></image> 
+       <image src="http://ovu8osqcv.bkt.clouddn.com/cooperation_9.png" data-key="Alexander Mcqueen" catchtap="coopSearch" style="width: 250rpx;height: 144rpx;border-left: 1rpx solid #e8e8e8;"></image>   
+    </view>
+  </view>
+  <view class="topic-title">
+  <image src="http://ovu8osqcv.bkt.clouddn.com/topic_title.png"></image>
+  </view>
+  <view class="topic-wrapper">
+    <!-- <view class="title">专题推荐</view> -->
+    <block wx:for="{{topicList}}"  wx:for-item="item" wx:for-index="index" wx:key="{{titlePic}}">
+    <view class="topic-item">
+      <!-- <view class="topic-img" data-index="{{index}}" catchtap="topicDetail">
+        <image src="{{item.titlePic}}" wx:if="{{item.titlePic}}"></image>
+      </view> -->
+        <view class="topic-img">
+        <image src="{{item.titlePic}}"></image>
+      </view>
+      <view class="topic-content">
+        <view class="left-com" data-id="{{item.data[0].id}}" catchtap="goodsDetail">
+          <image src="{{item.data[0].pic}}"></image>
+          <view class="name">{{item.data[0].title}}</view>
+          <view class="price">￥{{item.data[0].marketPrice}}</view>
+        </view>
+        <view class="right-com">
+         <block wx:for="{{item.data}}"  wx:for-item="child"  wx:for-index="idx" wx:key="{{id}}">
+          <view class="goods-item" wx:if="{{idx > 0}}"  data-id="{{child.id}}" catchtap="goodsDetail">
+            <image src="{{child.pic}}?imageView2/1/w/286/h/426/format/jpg"></image>
+            <view class="name">{{child.title}}</view>
+            <view class="price">￥{{child.marketPrice}}</view>
+          </view>
+         </block> 
+        </view>
+      </view>
+    </view>
+  </block>
+  </view>
+
+  <!-- <view class="category-list">
+    <block wx:for="{{categoryList}}"  wx:for-item="item" wx:key="{{categoryId}}">
+    <navigator url="../goods/goods?id={{item.categoryId}}" hover-class="navigator-hover">
+    <view class="category-item">
+      <image src="{{item.picUrl}}"></image>
+    </view>
+    </navigator>
+    </block>
+  </view> -->
+</view>

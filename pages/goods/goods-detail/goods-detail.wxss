@@ -1,0 +1,114 @@
+@import "buy-template/buy-template.wxss";
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-wrapper {
+  padding-top: 30rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+}
+swiper {
+  height: 1027rpx;
+  margin: 0 30rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 1027rpx;
+}
+
+.name-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 30rpx 10rpx 30rpx;
+}
+
+.name-row .left-name {
+  font-size: 30rpx;
+  margin-right: 10rpx;
+}
+
+.name-row .right-percent {
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 40rpx;
+  background: url(http://ovu8osqcv.bkt.clouddn.com/percent_bg.png?imageView2/1/w/240/h/100); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  text-align: center;
+}
+
+.name-row .right-percent text{
+  font-size: 20rpx;
+  color: #fff;
+}
+.name-row .right-percent .percent{
+  font-size: 26rpx;
+}
+.integral{
+   margin-left: 30rpx;
+}
+.integral .integral-text{
+  font-size: 24rpx;
+  color: rgb(117, 117, 117);
+}
+.integral .integral-num{
+  /* margin-left: 20rpx; */
+  font-size: 40rpx;
+}
+.price-stock{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 30rpx;
+}
+.price-stock text{
+  font-size: 24rpx;
+  color: rgb(117, 117, 117);
+}
+.goods-info{
+  margin-top: 15rpx;
+  background: #fff;
+  padding: 20rpx 30rpx;
+}
+.goods-info .title{
+  font-size: 30rpx;
+}
+.goods-info .content{
+  margin-top: 20rpx;
+  line-height: 32rpx;
+  font-size: 24rpx;
+  color: rgb(117, 117, 117);
+}
+.btn-wrapper{
+padding-bottom: 45rpx;
+}
+.buy-btn{
+  margin-top: 20rpx;
+  margin-left:40rpx;
+  margin-right: 40rpx;
+  background: #000;
+  font-size: 36rpx;
+  color: #fff;
+}
+.overplay{
+  position: fixed;
+  top: 0;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.6);
+  z-index: 1005;
+  overflow: hidden;
+}
+.buy-detail{
+  position: fixed;
+  top: 86rpx;
+  bottom:0;
+  width: 100%;
+  background: #fff;
+}

@@ -1,0 +1,69 @@
+<view class="container">
+  <form bindsubmit="saveAddAddress">
+    <view class="address-wrapper">
+      <view class="address-row">
+        <text class="left-text">收货人</text>
+        <view class="right-com">
+          <input placeholder="请填写收货人姓名" name="name" value="{{addressInfo.name}}" />
+        </view>
+      </view>
+      <view class="address-row">
+        <text class="left-text">手机号码</text>
+        <view class="right-com">
+          <input type="number" placeholder="请填写手机号码" name="mobile" value="{{addressInfo.mobile}}" />
+        </view>
+      </view>
+      <view class="address-row">
+        <text class="left-text">所在城市</text>
+        <view class="right-com city-select" bindtap="showDistpicker">
+          <view class="input">
+            <block wx:if="{{provinceName[provinceSelIndex]}}">{{provinceName[provinceSelIndex]}} {{cityName[citySelIndex]}} {{districtName[districtSelIndex]}}</block>
+            <block wx:else>
+              <block wx:if="{{addressInfo.province}}">{{addressInfo.province}} {{addressInfo.city}} {{addressInfo.district}}</block>
+              <text wx:else class="input-placeholder">请选择所在地区</text>
+            </block>
+          </view>
+          <image src="/images/my/icon_right.png"></image>
+        </view>
+      </view>
+      <view class="address-row">
+        <text class="left-text">收货地址</text>
+        <view class="right-com">
+          <input placeholder="请填写您的具体地址" name="detail" value="{{addressInfo.detail}}" />
+        </view>
+      </view>
+    </view>
+       <view class="address-row default-row"> 
+      <text class="left-text">设为默认</text>
+      <view class="right-com">
+        <switch type="switch" name="defaultFlag" color="#000" checked="{{addressInfo.defaultFlag == 1}}" />
+      </view>
+     </view>   
+
+    <button class="save-btn" formType="submit">保存收货地址</button>
+    <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden" />
+    <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden" />
+    <input type="text" name="district" value="{{districtName[districtSelIndex]}}" class="hidden" />
+  </form> 
+  <view class="distpicker {{showDistpicker ? '' : 'hidden'}}">
+    <view class="distpicker-btn">
+      <view class="distpicker-cancel-btn" bindtap="distpickerCancel">取消</view>
+      <view class="distpicker-sure-btn" bindtap="distpickerSure">确定</view>
+    </view>
+    <picker-view indicator-style="height: 40px;" class="distpicker-content" value="{{value}}" bindchange="changeArea">
+      <!-- 省 -->
+      <picker-view-column>
+        <view wx:for="{{provinceName}}" wx:key="province" class="area-item">{{item}}</view>
+      </picker-view-column>
+      <!-- 市 -->
+      <picker-view-column>
+        <view wx:for="{{cityName}}" wx:key="city" class="area-item">{{item}}</view>
+      </picker-view-column>
+      <!-- 区 -->
+      <picker-view-column>
+        <view wx:for="{{districtName}}" wx:key="district" class="area-item">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+  <view class="mask" catchtap="distpickerCancel" hidden="{{!showDistpicker}}"></view>
+</view>

@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.head-wrapper{
+  height: 365rpx;
+}
+.head-wrapper image{
+  width: 100%;
+  height: 100%;
+}
+.title-wrapper{
+  margin-top: 60rpx;
+  height: 72rpx;
+}
+.title-wrapper image{
+  width: 100%;
+  height: 100%;
+}
+.cntent-wrapper{
+  margin-top: 20rpx;
+}
+.content-wrapper image{
+  width: 100%;
+  height: 100%;
+}
+.foot-wrapper{
+  margin-top: 60rpx;
+  height: 158rpx;
+  padding-bottom: 100rpx;
+}
+.foot-wrapper image{
+  width: 100%;
+  height: 100%;
+}
+.fix-button{
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  width: 294rpx;
+  height: 90rpx;
+  text-align: center;
+}
+.fix-button image{
+  width: 100%;
+  height: 100%;
+}

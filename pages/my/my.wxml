@@ -1,0 +1,70 @@
+<view class="container">
+  <view class="head-box">
+    <view class="head-car" catchtap="toMiniProgram">
+      <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="bind-phone" wx:if="{{userInfo.rightStatus == 1}}">领取权益</button> -->
+      <view class="cardno" wx:if="{{isReg}}">{{userInfo.cardNo}}</view>
+      <view class="nickname" wx:if="{{isReg}}">{{userInfo.nickName}}</view>
+    </view>
+    <view class="integral-rights">
+     <navigator url="integral/integral">
+      <view class="integral">
+      账户余额：{{userInfo.availablePoints}}
+      </view>
+     </navigator> 
+      <!-- <view class="rights"  catchtap="toMiniProgram">
+        会员权益
+      </view> -->
+      <!-- <view class="rights"  wx:if="{{userInfo.rightStatus >=2}}" catchtap="toMiniProgram">
+        使用会员权益
+      </view> -->
+    </view>
+  </view>
+  <view class="menu-items">
+    <view class="item-row" data-url="integral/integral" catchtap="onMyTap">
+      <text class="left-text">我的余额</text>
+      <view class="right-com">
+       <image src="/images/my/icon_right.png"></image>
+      </view>
+    </view>
+     <view class="item-row" data-url="../order/order" catchtap="onMyTap">
+      <text class="left-text">我的订单</text>
+      <view class="right-com">
+       <image src="/images/my/icon_right.png"></image>
+      </view>
+    </view>
+       <view class="item-row" catchtap="couponTap">
+      <text class="left-text">我的礼券</text>
+       <view class="right-com ">
+       <!-- <view class="red-dot" wx:if="{{redDot}}"></view> -->
+       <image src="/images/my/new_icon.png" class="new-icon" wx:if="{{redDot}}"></image>
+       <image src="/images/my/icon_right.png"></image>
+      </view>
+    </view>
+     <view class="item-row" data-url="address/address" catchtap="onMyTap">
+      <text class="left-text">收货地址</text>
+      <view class="right-com">
+       <image src="/images/my/icon_right.png"></image>
+      </view>
+    </view>
+     <view class="item-row" data-url="invite/invite" catchtap="onMyTap">
+      <text class="left-text">邀请好友</text>
+      <view class="right-com">
+       <image src="/images/my/icon_right.png"></image>
+      </view>
+    </view>
+      <view class="item-row" data-url="agent/agent" catchtap="onMyTap">
+      <text class="left-text">VIP体验</text>
+      <view class="right-com agent">
+       <text wx:if="{{userInfo.roleType==1}}">未认证</text>
+       <text wx:if="{{userInfo.roleType==2}}">已认证</text>
+       <image src="/images/my/icon_right.png"></image>
+      </view>
+    </view> 
+     <!-- <view class="item-row last-row" data-url="question/question" catchtap="onMyTap">
+      <text class="left-text">常见问题</text>
+      <view class="right-com">
+       <image src="/images/my/icon_right.png"></image>
+      </view>
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.top-title{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+}
+.input-wrapper{
+  display: flex;
+  flex-direction: row;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  margin-top: 15px;
+}
+.input-wrapper text{
+  width: 150rpx;
+  font-size: 30rpx;
+}
+.input-wrapper input{
+  margin-left: 10rpx;
+  margin-top: 22rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+}
+.intro-wrapper{
+  margin-top: 20px;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+.intro-wrapper text{
+  display: block;
+  line-height: 48rpx;
+  font-size: 28rpx;
+}
+.sub-btn{
+  margin-top: 180rpx;
+  margin-left:40rpx;
+  margin-right: 40rpx;
+  background: #000;
+  font-size: 36rpx;
+  color: #fff;
+}
+.bottom-text{
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  text-decoration: underline;
+}
